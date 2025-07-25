@@ -4,7 +4,7 @@ library(dplyr)
 library(tidyr)
 
 # Load the data files
-fao_data <- read.csv("C:/Users/mise017/OneDrive - PNNL/Documents/nFlowsR/2nd_fao_data.csv")
+fao_data <- read.csv("C:/Users/mise017/OneDrive - PNNL/Documents/nFlowsR/Original_data_GCAMreg.csv")
 gcam_ids <- read.csv("C:/Users/mise017/OneDrive - PNNL/Documents/nFlowsR/GCAMregID.csv")
 
 # Print column names to debug
@@ -32,9 +32,9 @@ fao_data$GCAMreg <- fao_data$GCAM_region_ID
 fao_data$GCAM_region_ID <- NULL
 
 # Save the updated dataset
-write.csv(fao_data, "C:/Users/mise017/OneDrive - PNNL/Documents/nFlowsR/1stGCAMreg.csv", row.names = FALSE)
+write.csv(fao_data, "C:/Users/mise017/OneDrive - PNNL/Documents/nFlowsR/Original_data_GCAMreg.csv", row.names = FALSE)
 
-print("GCAMreg column updated and file saved as '1stGCAMreg.csv'")
+print("GCAMreg column updated and file saved as 'Original_data_GCAMreg.csv'")
 
-withGCAMreg <- read_csv("1stGCAMreg.csv")
+withGCAMreg <- read_csv("Original_data_GCAMreg.csv")
 
